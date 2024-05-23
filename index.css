@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+.dup-body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Kumbh Sans", sans-serif;
+    background-color:hsl(0, 0%, 100%);
+}
+.nav-bar
+{
+    height:10%;
+    width:100%;
+    display: flex;
+    margin-top: 1%;
+}
+.logo
+{
+    width:20%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-content{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.profile{
+    width:30%;
+    display: flex;
+}
+.modules h3{
+    font-weight: 300;
+    font-size: medium;
+    opacity: 60%;
+}
+.modules h3:hover{
+    font-weight: 400;
+    border-bottom: 2.5px solid hsl(26, 100%, 55%);
+    opacity: 100%;
+}
+.cart{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+i{
+    font-size:x-large;
+}
+.photo{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.photo img{
+    height: 80%;
+    width: 30%;
+    border-radius:50%;
+}
+.photo img:hover{
+    border: 3px solid orange;
+}
+.line{
+    height:0.3%;
+    width:80%;
+    margin-top: 1%;
+    margin-left: -10%;
+    background-color: rgb(125, 126, 126);
+}
+.main-content{
+    height: 70%;
+    display: flex;
+    width:80%;
+    margin-top: 2%;
+}
+.main-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.main-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.display-pic
+{
+    height:80%;
+    display: flex;
+    margin-right: 0%;
+    justify-content: center;
+    align-items: center;
+}
+.display-pic img
+{
+    height: 80%;
+    width: 50%;
+    border-radius: 20px;
+}
+.sub-pic{
+    height: 20%;
+    display: flex;
+    margin-left: 15%;
+    align-items: center;
+}
+.change-photo{
+    height: 60%;
+    margin-right: 7%;
+    width:13%;
+}
+.change-photo img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+.name{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+}
+.desc{
+    height: 20%;
+    width: 90%;
+}
+.rate{
+    height: 12%;
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.add-to-cart{
+    height:10%;
+    width: 90%;
+    display: flex;
+}
+.name h3{
+    font-weight: 300;
+    color: grey;
+}
+.cart-left{
+    width: 40%;
+    margin-right: 5%;
+    display: flex;
+}
+.cart-right{
+    width:40%;
+}
+.price-offer{
+    display: flex;
+    justify-content: space-between;
+}
+.actual{
+    width: 30%;
+}
+.offer{
+    display:flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: grey;
+}
+.offer h4{
+    font-size: small;
+    color: white;
+}
+.discount h4{
+    text-decoration: line-through;
+}
+.cart-right button{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    /* all: unset; */
+    background-color: hsl(26, 100%, 55%);
+}
+.decrement {
+    width: 30%;
+    color: orange;
+    font-size: x-large;
+    border: none;
+    background-color:  hsl(223, 64%, 98%);
+    border-radius: 10px 0px 0px 10px;
+}
+.count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background-color:  hsl(223, 64%, 98%);
+}
+.incerment{
+width: 30%;
+font-size: x-large;
+color: orange;
+border: none;
+background-color:  hsl(223, 64%, 98%);
+border-radius: 0px 10px 10px 0px;
+}
+.change-photo:hover{
+    border: 2px solid orange;
+    border-radius: 10px;
+    opacity: 60%;
+}
+.menu-bt
+{
+    display: none;
+    float: right;
+    align-items: center;
+    cursor: pointer;
+}
+#menu
+{
+    display: none;
+}
+.menu-data
+{
+        position: absolute;
+        top: 60px;
+        right: 0.2rem;
+        width: 20%;
+        color: rgb(238, 241, 241);
+        height: 12%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        background-color: #f5bfd7;
+        backdrop-filter: blur(20px);
+        overflow: hidden;
+        border-radius: 10px;
+}
+li{
+    list-style: none;
+    margin-top: 2%;
+}
+a{
+    color: rgb(55, 56, 56);
+    font-size: small;
+    font-family: "Kumbh Sans", sans-serif;
+    text-decoration: none;
+}
+li:hover{
+    font-size: large;
+    font-weight: 800;
+    transition: 0.2s;
+}
+@media(max-width:400px)
+{
+    .nav-bar{
+        display: none;
+    }
+    .menu-bt{
+        display: block;
+        float: left;
+    }
+    .logo
+    {
+        width:20%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h3
+    {
+        font-size: small;
+    }
+    .line{
+        height:0.3%;
+        width:80%;
+        margin-top: 1%;
+        margin-left: -10%;
+        background-color: rgb(125, 126, 126);
+    }
+    .main-content{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width:80%;
+        margin-top: 2%;
+    }
+    .main-left{
+        height: 40%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .main-right{
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .display-pic
+    {
+        height:80%;
+    }
+    .display-pic img
+    {
+        height: 70%;
+        width: 100%;
+    }
+    .sub-pic{
+        height: 20%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .change-photo{
+        height: 80%;
+        width:30%;
+    }
+    .change-photo img{
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+
+    }
+    .name{
+        height: 30%;
+        width: 90%;
+    }
+    .desc{
+        height: 20%;
+        width: 100%;
+        margin-top: -7%;
+        font-size: small;
+    }
+    .rate{
+        height: 15%;
+        width:70%;
+        padding-top: 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .add-to-cart{
+        height:10%;
+        width: 100%;
+        display: flex;
+    }
+    .name h3{
+        margin-top: 2%;
+        font-weight: 300;
+        font-size: medium;
+        color: grey;
+    }
+    h1
+    {
+        font-size:large;
+    }
+    .cart-left{
+        width: 40%;
+        display: flex;
+    }
+    .cart-right{
+        width:40%;
+    }
+    .price-offer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .discount h4
+    {
+        font-size: medium;
+    }
+    .actual{
+        width: 30%;
+    }
+    .actual h3
+    {
+        font-size: large;
+    }
+    .offer{
+        display:flex;
+        width: 40%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: grey;
+    }
+    .offer h4{
+        font-size: x-small;
+        color: white;
+    }
+    .discount h4{
+        text-decoration: line-through;
+    }
+    .cart-right button{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        background-color: hsl(26, 100%, 55%);
+    }
+    .decrement{
+        width: 30%;
+        color: orange;
+        font-size: x-large;
+        border: none;
+        background-color:  hsl(223, 64%, 98%);
+        border-radius: 10px 0px 0px 10px;
+    }
+    .count{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        background-color:  hsl(223, 64%, 98%);
+    }
+    .incerment{
+    width: 30%;
+    font-size: x-large;
+    color: orange;
+    border: none;
+    background-color:  hsl(223, 64%, 98%);
+    border-radius: 0px 10px 10px 0px;
+    }
+    .change-photo:hover{
+        border: 2px solid orange;
+        border-radius: 10px;
+        opacity: 60%;
+    }
+    li:hover{
+        margin-bottom: 2px solid orange;
+        cursor: pointer;
+    }
+    
+}
+@media(min-width:401px) and (max-width:800px)
+{
+.nav-bar
+{
+    height:10%;
+    width:100%;
+    display: flex;
+    margin-top: 1%;
+}
+.logo
+{
+    width:20%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-content{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.profile{
+    width:30%;
+    display: flex;
+}
+.modules h3{
+    font-size: small;
+    opacity: 80%;
+}
+.modules h3:hover{
+    font-weight: 400;
+    border-bottom: 2.5px solid hsl(26, 100%, 55%);
+    opacity: 100%;
+}
+.cart{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+i
+{
+    font-size:x-large;
+}
+.photo
+{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+h2
+{
+    font-size: medium;
+}
+.photo img{
+    height: 80%;
+    width: 30%;
+    border-radius:50%;
+}
+.photo img:hover{
+    border: 3px solid orange;
+}
+.line{
+    height:0.3%;
+    width:80%;
+    margin-top: 1%;
+    margin-left: -10%;
+    background-color: rgb(125, 126, 126);
+}
+.main-content{
+    height: 70%;
+    display: flex;
+    width:80%;
+    margin-top: 2%;
+}
+.main-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.main-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.display-pic
+{
+    height:70%;
+    display: flex;
+    margin-right: 0%;
+    justify-content: center;
+    align-items: center;
+}
+.display-pic img
+{
+    height: 80%;
+    width: 100%;
+    margin-left: -20%;
+    border-radius: 20px;
+}
+.sub-pic{
+    height: 30%;
+    margin-left: -10%;
+}
+.change-photo{
+    height: 30%;
+    margin-right: 4%;
+    width:16%;
+}
+.change-photo img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+.name{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+}
+p
+{
+    font-size: medium;
+}
+h1
+{
+    font-size:large;
+}
+.desc{
+    height: 20%;
+    width: 100%;
+}
+.rate{
+    height: 12%;
+    width:70%;
+    margin-top: 40%;
+}
+.add-to-cart{
+    height:10%;
+    width: 100%;
+    display: flex;
+}
+.name h3{
+    font-weight: 300;
+    font-size: medium;
+    color: grey;
+}
+.cart-left{
+    width: 50%;
+    margin-right: 5%;
+    display: flex;
+}
+.cart-right{
+    width:40%;
+}
+
+.cart-right button{
+    height: 100%;
+    width: 100%;
+    font-size: x-small;
+    border-radius: 10px;
+    border: none;
+    /* all: unset; */
+    background-color: hsl(26, 100%, 55%);
+}
+
+}

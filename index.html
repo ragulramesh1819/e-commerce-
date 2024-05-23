@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />;
+
+</head>
+<body>
+    <div class="dup-body">
+        <div class="nav-bar">
+            <div class="logo"><h2>Sneakers</h2></div>
+            <div class="nav-content">
+                <div class="modules"><h3>Collections</h3></div>
+                <div class="modules"><h3>Men</h3></div>
+                <div class="modules"><h3>Women</h3></div>
+                <div class="modules"><h3>About</h3></div>
+                <div class="modules"><h3>Contact</h3></div>
+            </div>
+            <div class="profile">
+                <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="photo"><img src="./image-avatar.png" alt=""></div>
+            </div>
+        </div>
+        <div class="menu-bt" id="toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="line"></div>
+        <div class="main-content">
+            <div class="main-left">
+                <div class="display-pic">
+                    <img id="org" src="./image-product-1.jpg" alt="">
+                </div>
+                <div class="sub-pic">
+                    <div class="change-photo" > <img id="photo-1" src="./image-product-1.jpg" alt=""></div>
+                    <div class="change-photo" ><img id="photo-2" src="./image-product-2.jpg" alt=""></div>
+                    <div class="change-photo" ><img id="photo-3" src="./image-product-3-thumbnail.jpg" alt=""></div>
+                    <div class="change-photo" ><img id="photo-4" src="./image-product-4.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="name">
+                    <h3>Sneaker Company</h3>
+                    <h1>Fall Limited Edition <br> Sneakers</h1>
+                </div>
+                <div class="desc">
+                    <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer</p>
+                </div>
+                <div class="rate">
+                    <div class="price-offer">
+                        <div class="actual">
+                            <h3>$125.00</h3>
+                        </div>
+                        <div class="offer">
+                            <h4>50%</h4>
+                        </div>
+                    </div>
+                    <div class="discount">
+                        <h4>$250.00</h4>
+                    </div>
+                </div>
+                <div class="add-to-cart">
+                    <div class="cart-left">
+                        <button class="decrement" onclick="dec()">-</button>
+                        <div class="count"> <h4 id="count">0</h4></div>
+                        <button class="incerment" onclick="inc()" >+</button>
+                    </div>
+                    <div class="cart-right">
+                        <button onclick="myFunction()" >Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-data" id ="menu">
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">Contact</a></li>
+    </div>
+    <script>
+        let c = 0;
+        function inc() {
+            c++;
+          document.getElementById("count").innerHTML = c;
+        }
+        function dec() {
+            if(c-1<=0)
+            c=0;
+            else
+            c--;
+          document.getElementById("count").innerHTML = c;
+        }
+        document.getElementById("photo-1").addEventListener("click", photochange1);
+        document.getElementById("photo-2").addEventListener("click", photochange2);
+        document.getElementById("photo-3").addEventListener("click", photochange3);
+        document.getElementById("photo-4").addEventListener("click", photochange4);
+        function photochange1() {
+             document.getElementById("org").src = "./image-product-1.jpg";
+        }
+        function photochange2() {
+             document.getElementById("org").src = "./image-product-2.jpg";
+        }
+        function photochange3() {
+             document.getElementById("org").src = "./image-product-3.jpg";
+        }
+        function photochange4() {
+             document.getElementById("org").src = "./image-product-4.jpg";
+        }
+        document.getElementById("toggle").addEventListener("click", toopen);
+        let j=1;
+        function toopen()
+        {
+            if(j==1 ){
+            document.getElementById('menu').style.height="120px";
+            document.getElementById('menu').style.display="block";
+            document.getElementById("org").style.width="70%";
+            document.getElementById("org").style.marginRight="30%";
+
+            j=0;
+            }
+            else{
+            document.getElementById('menu').style.height="0";
+            document.getElementById('menu').style.display="none";
+            document.getElementById("org").style.width="100%";
+            document.getElementById("org").style.marginRight="0%";
+            j=1;
+            }
+        }
+        </script>
+</body>
+
+</html>
